@@ -1,0 +1,2 @@
+python removal.py --image 1  --metric w4 --model_type cnn --model_name ori --model_path CNN/models/cnn/ --img_res_path res/w4/relu/cifarori_vgg9_new_curv0/ --dataset cifar10 --community 1 --edge 0 --activation relu --sample_num 1 --img_data_path res/w4/relu/cifarori_vgg9/ --alpha 0.9
+python removal.py --image 1 --metric w4 --model_type cnn --model_name ori --model_path CNN/models/cnn/ --img_res_path res/w4/relu/cifarori_vgg9_new_curv0/ --dataset cifar10 --community 0 --edge 1 --activation relu --sample_num 1 --img_data_path res/w4/relu/cifarori_vgg9.9_def7/ --alpha 0.9
