@@ -1,31 +1,49 @@
-# Official code for Post Training NN Prunng using Graph Curvature
+# Official Code for Post-Training Neural Network Pruning using Graph Curvature
 
-## Neural Graph Definitions (Default w4)
+## Neural Graph Definition (Default: `w4`)
 
-- --metric w4
+- `--metric w4`
 
-## run commond (see run_vgg.sh as an example)
+---
 
-'python removal.py --image 1  --metric w4 --model_type cnn --model_name ori --model_path CNN/models/cnn/ --img_res_path res/w4/relu/cifarori_vgg9_new_curv0/ --dataset cifar10 --community 1 --edge 0 --activation relu --sample_num 1 --img_data_path res/w4/relu/cifarori_vgg9/ --alpha 0.9'
+## Example Command
 
-- removal.py (main file)
+(See `run_vgg.sh` for a full example)
 
-- --image (image classifier)
+```bash
+python removal.py --image 1 --metric w4 --model_type cnn --model_name ori \
+--model_path CNN/models/cnn/ \
+--img_res_path res/w4/relu/cifarori_vgg9_new_curv0/ \
+--dataset cifar10 \
+--community 1 \
+--edge 0 \
+--activation relu \
+--sample_num 1 \
+--img_data_path res/w4/relu/cifarori_vgg9/ \
+--alpha 0.9
+```
 
-- --metric (default w4)
+---
 
-- --model_name (ori, wd, adv denote as CE, WD, AT)
+## Main Script
 
-- --img_res_path (results saved path)
+- `removal.py` – main pruning script
 
-- --community (1: calculate curvature)
+---
 
-- --edge (1: count results and start pruning)
+## Arguments
 
-- --activation (relu or tanh)
-
-- --sample_num (number of calibration set used for curvature calculation, per label)
-
-- --img_data_path (curvature results path used for pruning)
-
-- --alpha (for curvature calculation, Def. 5 in the paper)
+| Argument | Description |
+|--------|-------------|
+| `--image` | Image classifier mode |
+| `--metric` | Neural graph metric (default: `w4`) |
+| `--model_name` | Training method: `ori` (CE), `wd` (Weight Decay), `adv` (Adversarial Training) |
+| `--model_path` | Path to pretrained model |
+| `--img_res_path` | Path to save pruning results |
+| `--dataset` | Dataset name (e.g., `cifar10`) |
+| `--community` | `1`: calculate graph curvature |
+| `--edge` | `1`: count results and start pruning |
+| `--activation` | Activation function (`relu` or `tanh`) |
+| `--sample_num` | Number of calibration samples per class used for curvature calculation |
+| `--img_data_path` | Path to curvature results used for pruning |
+| `--alpha` | Parameter for curvature calculation (Definition 5 in the paper) |
