@@ -46,7 +46,6 @@ python removal.py --image 1 --metric w4 --model_type cnn --model_name ori \
 | `--activation` | Activation function (`relu` or `tanh`) |
 | `--sample_num` | Number of calibration samples per class used for curvature calculation |
 | `--img_data_path` | Path to curvature results used for pruning |
-
 | `--alpha` | Parameter for curvature calculation (Definition 5 in the paper) |
 
 ## To Do
@@ -54,3 +53,4 @@ python removal.py --image 1 --metric w4 --model_type cnn --model_name ori \
 - dataset
 
 - model pkl
+
