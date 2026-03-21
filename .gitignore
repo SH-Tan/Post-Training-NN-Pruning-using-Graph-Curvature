@@ -162,7 +162,7 @@ wheels/
 *.egg
 *.csv
 
-*.txt
+
 *.png
 *.pkl
 *.eps
@@ -249,7 +249,6 @@ ENV/
 # input data, saved log, checkpoints
 input/
 saved/
-datasets/
 backup/
 activate_2l/
 activate_3l/
