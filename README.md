@@ -48,9 +48,7 @@ python removal.py --image 1 --metric w4 --model_type cnn --model_name ori \
 | `--img_data_path` | Path to curvature results used for pruning |
 | `--alpha` | Parameter for curvature calculation (Definition 5 in the paper) |
 
-## To Do
 
-- dataset
+#### dataset: https://drive.google.com/drive/folders/1hmOSsB2mjwcBEO3eIjFsDB_9x1uJDjqb?usp=drive_link
 
-- model pkl
 
