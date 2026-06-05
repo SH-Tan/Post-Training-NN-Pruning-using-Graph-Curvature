@@ -2,7 +2,7 @@
 
 This repository contains the official implementation of **Post-Training Neural Network Pruning using Graph Curvature**, accepted to *Transactions on Machine Learning Research (TMLR), 2026*.
 
-Our method studies neural network pruning from a graph-theoretic perspective and uses graph curvature to identify structurally important components of a trained neural network. The proposed approach enables post-training pruning without requiring full retraining, providing an efficient way to reduce model complexity while preserving predictive performance.
+Our method studies neural network pruning from a graph-theoretic perspective and uses graph curvature to identify structurally important components of a trained neural network. The proposed approach enables one-shot post-training pruning without requiring retraining, providing an efficient way to reduce model complexity while preserving predictive performance.
 
 ## Paper
 
